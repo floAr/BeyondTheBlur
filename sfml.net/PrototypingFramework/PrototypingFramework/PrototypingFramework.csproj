@@ -32,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Includesfmlnet-audio-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="sfmlnet-graphics-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="sfmlnet-window-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86" /" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -46,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile InNone Include="01\\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="csfml-audio-2.dll">
@@ -65,7 +68,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sfmlnet-audio-2.dll" />
-    <Content Include="sfmlnet-graphics-2.dll" />
+    <Content Include="sfmlnet-graphics-2.dReadme.txt" /ude="sfmlnet-graphics-2.dll" />
     <Content Include="sfmlnet-window-2.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
