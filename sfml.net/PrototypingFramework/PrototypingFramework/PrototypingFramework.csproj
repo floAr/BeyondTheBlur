@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile InNone Include="01\\AssemblyInfo.cs" />
+    <Compile InNoCompilInclude="01\\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="csfml-audio-2.dll">

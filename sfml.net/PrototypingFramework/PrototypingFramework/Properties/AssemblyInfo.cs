@@ -8,10 +8,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PrototypingFramework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("VOLKSWAGEN GROUP")]
-[assembly: AssemblyProduct("PrototypingFramework")]
-[assembly: AssemblyCopyright("Copyright © VOLKSWAGEN GROUP 2012")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("VOLKSWAGENbly: AssemblyProduct("PrototypingFramework")]
+[assembly: AssemblyCopyright("Copyright ©y: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Durch Festlegen von ComVisible auf "false" werden die Typen in dieser Assembly unsichtbar 
