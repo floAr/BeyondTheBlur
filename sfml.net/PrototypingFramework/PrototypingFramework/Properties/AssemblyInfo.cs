@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("PixelDale")]
+[assembly: AssemblyTitle("PrototypingFramework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PixelDale")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCompany("VOLKSWAGEN GROUP")]
+[assembly: AssemblyProduct("PrototypingFramework")]
+[assembly: AssemblyCopyright("Copyright © VOLKSWAGEN GROUP 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("38bfd68e-c907-402b-ac1c-ef266f116bfb")]
+[assembly: Guid("5afb30ff-68f6-48c7-9a7e-b36dbdbf6bf6")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
