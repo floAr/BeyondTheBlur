@@ -8,7 +8,7 @@ namespace LScape
 	{
 	public:
 		/** Constructor, creates a Heightmap with the given width and height. */
-		Heightmap(unsigned int width, unsigned int height);
+		Heightmap(unsigned int width, unsigned int height, double* data = 0);
 
 		/** Destructor, frees allocated space. */
 		~Heightmap();
@@ -19,7 +19,16 @@ namespace LScape
 		/** Set data at the specified position. */
 		void setData(unsigned int x, unsigned int y, double value);
 
-		/* \todo Get height map, light map and normal map */
+		/** Creates a greyscale Height Map in RGBA format from the height data.
+		  * \param clipMin The minimum value, below which everything is pure black.
+		  * \param clipMin The maximum value, below which everything is pure white.
+		  * \param buffer Pointer to a block of memory to write the Height Map to. The block must
+		  *   be at least mWidth*mHeight*4 bytes in size. If you don't pass a pointer, the memory
+		  *   is allocated using malloc and a pointer is returned. If you pass a pointer, the return
+		  *   value is just the pointer you passed. */
+		unsigned char* getHeightMap(double clipMin = 0.0, double clipMax = 1.0, unsigned char* buffer = 0);
+
+		/* \todo Get light map and normal map */
 
 	private:
 		/** The width of the heightmap image. */
