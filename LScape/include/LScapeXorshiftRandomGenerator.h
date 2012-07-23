@@ -21,6 +21,9 @@ namespace LScape
 		/** Skip ahead any number of random values. */
 		virtual void skip(unsigned int count);
 
+		/** Skip to a specific random value position. */
+		virtual void skipTo(unsigned int pos);
+
 	protected:
 		/** Initialise the RandomGenerator with a given seed. */
 		virtual void initialise(unsigned int seed);

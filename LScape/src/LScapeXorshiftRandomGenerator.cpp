@@ -6,7 +6,7 @@ void XorshiftRandomGenerator::initialise(unsigned int seed)
 {
 	// The seed can be used as-is and needs no processing
 	mSeed = seed;
-	mState = seed;
+	reset();
 }
 
 int XorshiftRandomGenerator::random()
@@ -16,6 +16,9 @@ int XorshiftRandomGenerator::random()
 	mState ^= mState >> 17;
 	mState ^= mState << 5;
 
+	// Save new position
+	++mPos;
+
 	return mState;
 }
 
@@ -23,10 +26,25 @@ void XorshiftRandomGenerator::reset()
 {
 	// Reset to seed
 	mState = mSeed;
+
+	// Reset position
+	mPos = 0;
 }
 
 void XorshiftRandomGenerator::skip(unsigned int count)
 {
 	// Just generate random numbers until we're done
-	for (unsigned int i=0; i<count; ++i) random();
+	for (unsigned int i=0; i<count; ++i)
+		random();
+}
+
+void XorshiftRandomGenerator::skipTo(unsigned int pos)
+{
+	// Reset if we passed the position
+	if (pos>mPos)
+		reset();
+
+	// Generate random numbers until we're done
+	while (mPos<pos)
+		random();
 }
