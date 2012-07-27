@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -32,6 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference IncludeAdvanceMath, Version=2.0.0.20246, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Physics2DDotNet, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" /" />
     <Reference Includesfmlnet-audio-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86" />
     <Reference Include="sfmlnet-graphics-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86" />
     <Reference Include="sfmlnet-window-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86" /" />
@@ -49,17 +51,66 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile InNoCompilInclude="01\\AssemblyInfo.cs" />
-  </ItemGroup>
+    <Compile InNoNone Include="01\Program.cs" />
+    <Compile Include="02\engine\GameEngine.cs" />
+    <Compile Include="02\engine\IGameState.cs" />
+    <Compile Include="02\engine\states\SplashState.cs" />
+    <Compile Include="02\Program.cs" />
+    <None Include="03\engine\GameEngine.cs" />
+    <None Include="03\engine\IGameState.cs" />
+    <None Include="03\engine\states\PickPrototypeState.cs" />
+    <None Include="03\engine\states\SplashState.cs" />
+    <None Include="03\Program.cs" />
+    <None Include="03\protoypes\IPrototype.cs" />
+    <None Include="03\protoypes\simple_prototype\simple_prototype.cs" />
+    <None Include="03\protoypes\skeletal_animation\skeletal_animation.cs" />
+    <None Include="04\engine\GameEngine.cs" />
+    <None Include="04\engine\IGameState.cs" />
+    <None Include="04\engine\states\PickPrototypeState.cs" />
+    <None Include="04\engine\states\SplashState.cs" />
+    <None Include="04\Program.cs" />
+    <None Include="04\protoypes\physic_prototype\physic_prototype.cs" />
+    <None Include="04\protoypes\IPrototype.cs" />
+    <None Include="04\protoypes\simple_prototype\simple_prototype.cs" />
+    <None Include="04\protoypes\skeletal_animation\skeletal_animation.cs" />
+    <None Include="06\engine\BatchedDrawable.cs" />
+    <None Include="06\engine\GameEngine.cs" />
+    <None Include="06\engine\GraphicComponent.cs" />
+    <None Include="06\engine\IGameState.cs" />
+    <None Include="06\engine\SpriteBatch.cs" />
+    <None Include="06\engine\states\PickPrototypeState.cs" />
+    <None Include="06\engine\states\SplashState.cs" />
+    <None Include="06\Program.cs" />
+    <None Include="06\protoypes\batched_protype\batched_protype.cs" />
+    <None Include="06\protoypes\IPrototype.cs" />
+    <None Include="06\protoypes\physic_prototype\physic_prototype.cs" />
+    <None Include="06\protoypes\simple_prototype\simple_prototype.cs" />
+    <None Include="06\protoypes\skeletal_animation\skeletal_animation.cs" />
+    <None Include="05\engine\ContentManager.cs" />
+    <None Include="05\engine\GameEngine.cs" />
+    <None Include="05\engine\IGameState.cs" />
+    <None Include="05\engine\states\PickPrototypeState.cs" />
+    <None Include="05\engine\states\SplashState.cs" />
+    <None Include="05\Program.cs" />
+    <None Include="05\protoypes\IPrototype.cs" />
+    <None Include="05\protoypes\physic_prototype\physic_prototype.cs" />
+    <None Include="05\protoypes\simple_prototype\simple_prototype.cs" />
+    <None Include="05\protoypes\skeletal_animation\skeletal_animation.cs" />
+    <None Include="06\engine\ContentManager.cs" />
+    <NonGroup>
   <ItemGroup>
     <Content Include="csfml-audio-2.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Pres06\protoypes\batched_protype\content\greenTile.PNGtDirectory>
     </Content>
-    <Content Include="csfml-graphics-2.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>PreserveNewestAdvanceMath.dll" />
+    <Content Include="csfml-audiooOutputDirectory>
     </Content>
-    <Content Include="csfml-window-2.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>PreserveNewestcsfml-graphicsoOutputDirectory>
+    </Content>
+    <Content Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>PreserveNewestewest</CopyToOutputDirectory>
     </Content>
     <Content Include="libsndfile-1.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -68,7 +119,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sfmlnet-audio-2.dll" />
-    <Content Include="sfmlnet-graphics-2.dReadme.txt" /ude="sfmlnet-graphics-2.dll" />
+    <Content Include="sfmlnet-graphics-2.dRePhysics2DDotNet.dll" /e="sfmlnet-graphics-2.dReadme.txt" /ude="sfmlnet-graphics-2.dll" />
     <Content Include="sfmlnet-window-2.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

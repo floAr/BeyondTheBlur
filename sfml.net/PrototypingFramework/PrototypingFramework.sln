@@ -3,6 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C# Express 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypingFramework", "PrototypingFramework\PrototypingFramework.csproj", "{13E600BE-F882-42EE-8919-F4C2E9294EEB}"
 EndProject
+GlobaProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PF_VersionChooser", "PF_VersionChooser\PF_VersionChooser.csproj", "{B71B59A1-5E82-4035-805B-5ABF78C7110EEndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +14,10 @@ Global
 		{13E600BE-F882-42EE-8919-F4C2E9294EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E600BE-F882-42EE-8919-F4C2E9294EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E600BE-F882-42EE-8919-F4C2E9294EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSectio	{B71B59A1-5E82-4035-805B-5ABF78C7110E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71B59A1-5E82-4035-805B-5ABF78C7110E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71B59A1-5E82-4035-805B-5ABF78C7110E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71B59A1-5E82-4035-805B-5ABF78C7110ECPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
