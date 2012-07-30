@@ -84,13 +84,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\LScapeHeightmap.cpp" />
+    <ClCompile Include="..\src\LScapeHeightData.cpp" />
+    <ClCompile Include="..\src\LScapeNoiseTerrainGenerator.cpp" />
     <ClCompile Include="..\src\LScapeTerainGenerator.cpp" />
     <ClCompile Include="..\src\LScapeXorshiftRandomGenerator.cpp" />
     <ClCompile Include="..\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\LScapeHeightmap.h" />
+    <ClInclude Include="..\include\LScapeHeightData.h" />
+    <ClInclude Include="..\include\LScapeNoiseTerrainGenerator.h" />
+    <ClInclude Include="..\include\LScapePerlinTerrainGenerator.h" />
     <ClInclude Include="..\include\LScapeTerrainGenerator.h" />
     <ClInclude Include="..\include\LScapeRandomGenerator.h" />
     <ClInclude Include="..\include\LScapeXorshiftRandomGenerator.h" />

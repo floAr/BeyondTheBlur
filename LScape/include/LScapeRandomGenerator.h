@@ -13,18 +13,11 @@ namespace LScape
 		/** Destructor */
 		virtual ~RandomGenerator() {}
 
-		/** Initialise the RandomGenerator with a given seed. You have to set mSeed to a
-		  * random seed yourself. */
-		virtual void initialise(unsigned int seed) = 0;
-
 		/** Return a random integer number. */
-		virtual int random() = 0;
+		virtual unsigned int random() = 0;
 
 		/** Reset the RandomGenerator to its seed. */
 		virtual void reset() = 0;
-
-		/** Skip ahead any number of random values. */
-		virtual void skip(unsigned int count) = 0;
 
 		/** Skip to a specific random value position. */
 		virtual void skipTo(unsigned int pos) = 0;

@@ -2,14 +2,14 @@
 
 using namespace LScape;
 
-void XorshiftRandomGenerator::initialise(unsigned int seed)
+XorshiftRandomGenerator::XorshiftRandomGenerator(unsigned int seed)
 {
 	// The seed can be used as-is and needs no processing
 	mSeed = seed;
 	reset();
 }
 
-int XorshiftRandomGenerator::random()
+unsigned int XorshiftRandomGenerator::random()
 {
 	// Shift the state somewhat
 	mState ^= mState << 13;
@@ -31,17 +31,10 @@ void XorshiftRandomGenerator::reset()
 	mPos = 0;
 }
 
-void XorshiftRandomGenerator::skip(unsigned int count)
-{
-	// Just generate random numbers until we're done
-	for (unsigned int i=0; i<count; ++i)
-		random();
-}
-
 void XorshiftRandomGenerator::skipTo(unsigned int pos)
 {
 	// Reset if we passed the position
-	if (pos>mPos)
+	if (mPos>pos)
 		reset();
 
 	// Generate random numbers until we're done

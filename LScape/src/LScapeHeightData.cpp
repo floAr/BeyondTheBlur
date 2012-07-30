@@ -1,10 +1,10 @@
-#include "LScapeHeightmap.h"
+#include "LScapeHeightData.h"
 #include <stdlib.h>
 #include <math.h>
 
 using namespace LScape;
 
-Heightmap::Heightmap(unsigned int width, unsigned int height, double* data)
+HeightData::HeightData(unsigned int width, unsigned int height, double* data)
 {
 	// Set dimensions
 	mWidth = width;
@@ -14,35 +14,45 @@ Heightmap::Heightmap(unsigned int width, unsigned int height, double* data)
 	if (data != 0)
 	{
 		// Use passed pointer
-		mHeightData = data;
+		mData = data;
 	}
 	else
 	{
 		// Allocate memory
-		mHeightData = (double*) malloc(mWidth * mHeight * sizeof(double));
+		mData = (double*) malloc(mWidth * mHeight * sizeof(double));
 	}
 }
 
-Heightmap::~Heightmap()
+HeightData::~HeightData()
 {
 	// Free space and set pointer to null
-	free(mHeightData);
-	mHeightData = 0;
+	free(mData);
+	mData = 0;
 }
 
-double Heightmap::getData(unsigned int x, unsigned int y)
+const unsigned int HeightData::getWidth()
+{
+	return mWidth;
+}
+
+const unsigned int HeightData::getHeight()
+{
+	return mHeight;
+}
+
+double HeightData::getData(unsigned int x, unsigned int y)
 {
 	// Get height data from memory
-	return mHeightData[y*mWidth+x];
+	return mData[y*mWidth+x];
 }
 
-void Heightmap::setData(unsigned int x, unsigned int y, double value)
+void HeightData::setData(unsigned int x, unsigned int y, double value)
 {
 	// Write height data to memory
-	mHeightData[y*mWidth+x] = value;
+	mData[y*mWidth+x] = value;
 }
 
-unsigned char* Heightmap::getHeightMap(double clipMin, double clipMax, unsigned char* buffer)
+unsigned char* HeightData::getHeightmap(double clipMin, double clipMax, unsigned char* buffer)
 {
 	// Catch bad parameters
 	if (clipMax <= clipMin)

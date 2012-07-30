@@ -1,15 +1,26 @@
 #include "LScapeTerrainGenerator.h"
-#include "LScapeHeightmap.h"
+#include "LScapeHeightData.h"
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 using namespace LScape;
 
-Heightmap* TerrainGenerator::getHeightmap(const unsigned int width, const unsigned int height,
-			const unsigned int offsetX, const unsigned int offsetY)
+HeightData* TerrainGenerator::getHeightData(const unsigned int width, const unsigned int height,
+			double offsetX, double offsetY,	double scale)
 {
 	// Create Heightmap object
-	Heightmap* result = new Heightmap(width, height);
+	HeightData* result = new HeightData(width, height);
 	// Calculate the desired height data
-	getHeightmap(result, offsetX, offsetY);
+	getHeightData(result, offsetX, offsetY, scale);
 
 	return result;
+}
+
+double TerrainGenerator::interpolate(double first, double second, double ratio)
+{
+	// cosine interpolation, comment out for linear
+	ratio = (1 - cos(ratio * M_PI)) * 0.5;
+
+	// return interpolated value
+	return (1-ratio)*first + ratio*second;
 }

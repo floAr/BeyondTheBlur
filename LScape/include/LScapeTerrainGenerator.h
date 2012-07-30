@@ -1,7 +1,7 @@
 #pragma once
 
 #include "LScapeRandomGenerator.h"
-#include "LScapeHeightmap.h"
+#include "LScapeHeightData.h"
 
 namespace LScape
 {
@@ -14,12 +14,15 @@ namespace LScape
 
 		/** Get height data from the TerrainGenerator. The memory is automatically allocated
 		  * using C++'s new construct. */
-		Heightmap* getHeightmap(const unsigned int width, const unsigned int height,
-			const unsigned int offsetX, const unsigned int offsetY);
+		HeightData* getHeightData(const unsigned int width, const unsigned int height,
+			double offsetX, double offsetY, double scale);
 
-		/** Get height data from TerrainGenerator and write it to the given Heightmap object.
+		/** Get height data from TerrainGenerator and write it to the given HeightData object.
 		  * The height and width are taken from the input parameter heightmap. */
-		virtual void getHeightmap(Heightmap* heightmap, const unsigned int offsetX,
-			const unsigned int offsetY) = 0;
+		virtual void getHeightData(HeightData* heightdata, double offsetX, double offsetY,
+			double scale) = 0;
+
+		/** Interpolate between two double values using cosine interpolation. */
+		static double interpolate(double first, double second, double ratio);
 	};
 }

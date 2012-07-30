@@ -24,7 +24,10 @@
     <ClCompile Include="..\src\LScapeXorshiftRandomGenerator.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\LScapeHeightmap.cpp">
+    <ClCompile Include="..\src\LScapeNoiseTerrainGenerator.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LScapeHeightData.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +35,19 @@
     <ClInclude Include="..\include\LScapeRandomGenerator.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\LScapeHeightmap.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\LScapeTerrainGenerator.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="..\include\LScapeXorshiftRandomGenerator.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LScapePerlinTerrainGenerator.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LScapeNoiseTerrainGenerator.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LScapeHeightData.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
